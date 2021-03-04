@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script>
+        function Home() {
+          location.replace("index.html");
+        }    
+    </script>
+    <style>
+        .my-music-plain{
+            height: 100%;
+            width: 100%;
+            background-image: url("./assets/my-music-background.gif");
+            display: flex;
+            justify-content:center;           
+        }
+        .my-music-plain p{
+            display: block;
+        }
+        .my-music-content{
+            background: white;
+            width: 60%;
+            margin: 30px;
+            border: 6px solid white;
+            background-image: url('./assets/music-flower.jpg');
+        }
+        .my-music-world{
+            border: 6px solid white;
+            background: rgb(132, 243, 243);           
+        }
+        .my-music-world h1{
+          text-align: right;
+        }
+        .my-music-world h2{
+            text-align: right;
+        }
+        .my-music-world h1,h2,p,a{
+            color: rgb(7, 118, 113);
+        }
+        p{
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        .my-music-world h2{
+           
+            margin: 3px;
+        }
+        .comming-home,.believe{
+            border-radius:  15px;
+            border: 6px solid #a8f4f5;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #E8FBFB;
+        }
+        .believe h2, .comming-home h2{
+            margin: 5px;
+            font-size: 30px;
+        }
+        .box-day{
+            border-bottom: 3px solid rgb(141, 247, 247);
+            border-bottom-style:dashed;           
+        }
+        .content img{
+            float:right;
+            padding-top: 15px;
+        }
+        .my-music-part{
+            display:flex;
+        }
+        .content-part{
+            width: 75%;
+            margin: 15px;
+        }
+        .useful-links{
+            border: 5px solid #008B8B;
+            height: 150px;
+            width: 25%;
+            margin: 15px;
+            margin-right: 10px;
+            border-radius: 15px; 
+            background:#00CED1;        
+        }
+        .useful-links ul{
+            padding-left: 30px;         
+        }       
+        .useful-links li{
+            padding-top: 10px;
+            color:#008B8B;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo" onclick="Home()">
+            <img src="https://mir-s3-cdn-cf.behance.net/user/276/bd566661043453.597b8b4c68b4b.jpg" style="display:inline-block"/>
+            <p>The Zoom</p>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li class="dropdown"><a>Practice</a>
+                    <div class="dropdown-content">
+                            <a href="./index.html">Lab 1-3</a>
+                            <a href="./lab1_ex4.html">Lab 1-4</a>
+                            <a href="./lab1_ex5.html">Lab 1-5</a>
+                            <a href="./lab1_ex6.html">Lab 1-6</a>
+                            <a href="./lab2_ex2.html">Lab 2-2</a>
+                            <a href="./lab2_ex3.html">Lab 2-3</a>
+                     </div>   
+                </li>
+                <li><a>Contact</a></li>              
+                <li><a href="./lab1_ex5.html">About</a></Link></li>
+                <li><a>Login / Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="home">
+        <div class="main-container">
+          <div class="my-music-plain">
+            <div class="my-music-content">
+                <div class="my-music-world">
+                    <h1>My Music World</h1>
+                    <h2>Without music, life would be a mistake</h2>
+                </div>
+                <div class="my-music-part">
+                    <div class="useful-links">
+                        <h2>Useful Links</h2>
+                        <ul>
+                            <li>...</li>
+                            <li>...</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="content-part">
+                    <div class="comming-home">
+                        <h2><a class="box-day">12/2/2014:</a> Coming Home</h2>
+                        <div class="content">
+                            <img src="assets/img1.jpg" />
+                            <p >
+                                Trong cái đầu óc đang mụ mị vì những cung đàn, nốt nhạc của hắn, 
+                                lờ mờ hiện ra một thứ gì đó rất mờ hồ và xa xôi rồi từ từ hiện rõ 
+                                hình ảnh của một con đường vắng, gồ ghề bởi những mô đất nhấp nhô, 
+                                khúc khủyu được soi rọi bởi thứ ánh sáng nhạt nhòe và yếu ớt của những ngọn đèn vàng.
+                            </p>
+                        </div>      
+                        <p><a href="http://bit.ly/1houlRR">Read more...</a></p>                     
+                    </div>
+                    <div class="believe">
+                        <h2><a class="box-day">10/1/2013:</a> Believe</h2>
+                        <div class="content">
+                            <img src="assets/img2.jpg" class="img-lab3"/>             
+                            <p >
+                                Số phận, phải chăng thứ này chi phối cả cuộc đời chúng ta, 
+                                là điều không thể thay đổi. Đừng bao giờ nói vậy, 
+                                bạn có bao giờ nghĩ rằng số phận nằm trong chính bàn tay chúng ta. 
+                                Mỗi ngày ta sống, cố gắng từng phút giây chẳng phải là để thay đổi tương lai 
+                                và số phận hay sao? Nhiều lúc gặp những thất bại, khổ đau bạn nản chí 
+                                và không muốn đi tiếp nữa. Hãy nhớ rằng: "Không có con đường trải hoa nào 
+                                dẫn đến những điều tốt đẹp cả. Hy vọng là điều kỳ diệu, 
+                                một điều cần được nuôi dưỡng và ấp ủ, và đổi lại nó sẽ làm chúng ta luôn sống động. 
+                                Hy vọng có thể được tìm thấy trong mỗi chúng ta và nó có thể mang ánh sáng 
+                                vào những nơi tăm tối nhất. Đừng bao giờ đánh mất hy vọng...”
+                            </p>
+                        </div>
+                        <p><a href="http://bit.ly/1fYfPMA">Read more...</a></p>                      
+                    </div>      
+                    </div>
+                </div>
+                <p class="lastest">
+                    Last updated: 2/2014
+                </p>
+            </div>        
+          </div>                 
+        </div>
+    </div>
+
+    <div id="footer">
+        <footer class="footer-distributed">       
+                <div class="footer-left">    
+                    <img src="https://mir-s3-cdn-cf.behance.net/user/276/bd566661043453.597b8b4c68b4b.jpg" style="width:130px; border:2px solid black"/>   
+                    <h3>Thai zoom<span>Cop</span></h3>  
+                    <p class="footer-links">
+                        <a href="#">Home</a>                            
+                        <a href="#">Blog</a>                      
+                        <a href="#">Pricing</a>                       
+                        <a href="#">About</a>                           
+                        <a href="#">Faq</a>                           
+                        <a href="#">Contact</a>
+                    </p>        
+                    <p class="footer-company-name">Design By Zoom Company © 2015</p>
+                </div>       
+                <div class="footer-center">       
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>123 3/2 street</span> Ninh Kiều, Cần Thơ</p>
+                    </div>        
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+84 0395996992</p>
+                    </div>        
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:support@company.com">nguyennhithai4620@gmail.com</a></p>
+                    </div>       
+                </div>       
+                <div class="footer-right">        
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                    </p>        
+                    <div class="footer-icons">      
+                        <a href="https://www.facebook.com/profile.php?id=100012416316231" target="_blank"><img src="./assets/facebook-square-brands.svg"></img></a>
+                        <a href="https://github.com/nhithai4620" target="_blank"><img src="./assets/github-square-brands.svg"></img></a>
+                        <a href="https://www.instagram.com/nhithai46200/?fbclid=IwAR16w1ZijZZnIhMe7xTJQZnGbHsVgWSetx59cahfMvdkIJxMFmFiFSAdmB8" target="_blank"><img src="./assets/instagram-square-brands.svg"></img></a>
+                        <a href="https://www.linkedin.com/in/nh%C4%A9-th%C3%A1i-nguy%E1%BB%85n-3997191b8/" target="_blank"><img src="./assets/linkedin-brands.svg"></img></a>      
+                    </div>
+                </div>
+        </footer>
+    </div>
+</body>
+</html>
