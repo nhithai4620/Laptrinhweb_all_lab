@@ -6,19 +6,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
     <script>
-        function Study_result() {
-          location.replace("lab1_ex4.html");
-        }
         function Home() {
           location.replace("index.html");
-        }
-        function CV() {
-          location.replace("lab1_ex5.html");
-        }
-
-       
-
+        }     
     </script>
+    <style>
+       .personal-infor{
+            width: 60%;
+            margin-left: 20%;
+            height: 100%;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            border: 2px solid black ;      
+       }
+       .personal-infor h1{
+           text-align: center;
+           padding: 10px;
+       }
+       .main-table{
+           display: flex;
+           justify-content: center;
+           padding: 20px;
+       }
+
+
+       .main-table tr{
+           margin: 20px;
+           
+       }
+       .main-table td{
+           padding-top: 20px;
+           font-weight: bold;
+           font-size: 18px;
+       }
+
+       .main-table td:first-child{
+           padding-right: 20px;
+           text-align: right;           
+       }
+
+       .main-table input{
+            width: 200px;
+            height: 25px;
+       }
+       .btn{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+       }
+       .btn button{
+           padding: 5px;
+           width: 100px;
+           margin: 10px;
+           border-radius: 5px;
+           font-size: 15px;
+       }
+     
+
+    </style>
 </head>
 <body>
     <div class="header">
@@ -51,37 +96,52 @@
         </div>
     </div>
     <div class="home">
-        <div class="logan">
-            <h3>Hi !  I ' am</h3>
-            <h5>Coder, Student, Front-end Developer</h5>
-            <p>I am a 3rd year student of Can Tho university, the major is IT HQ</p>
-            <p>My purpose is to get a good job in the future as a web developer</p>
+        <div class="main-container">
+                <div class="personal-infor">
+                        <h1>Personal information</h1>
+                        <form id="main-form">
+                        <table class="main-table">
+                           <tr>
+                               <td>Enter name*: </td><td><input style="width: 300px;" required /></td>
+                           </tr>
+                           <tr>
+                            <td>Sex*: </td><td><form >  
+                                <input type="radio" id="male" name="gender" value="male" style="width:50px;">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" style="width:50px;">
+                                <label for="female">Female</label></form>
+                            </td> 
+                            </tr>
+                            <tr>
+                                <td>Enter email address*: </td><td><input style="width: 300px;" type="email" required /></td>
+                            </tr>
+                            <tr>
+                                <td>Enter birthday*: </td><td><input style="width: 200px;" required type="date" /></td>
+                            </tr>
+                            <tr>
+                                <td>Enter street address*: </td><td><input style="width: 100px;" required /></td>
+                            </tr>
+                            <tr>
+                                <td>Enter city*:</td><td><input style="width: 100px;" required /></td>
+                            </tr>
+                            <tr>
+                                <td>Select a region*: </td><td>
+                                <select style="height: 25px; width:90px;" required id="region">
+                                    <option value="Northern">Northern</option>
+                                    <option value="Central">Central</option>
+                                    <option value="Southern">Southern</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Enter 5-digit ZIP code*: </td><td><input  style="width: 100px;" required maxlength="5" /></td>
+                            </tr>
+                       </table>
+                       <div class="btn"><button onclick="subm()">Finished</button><button onclick="clr()">Clear</button></div>
+                       </form>
+                </div>                  
         </div>
     </div>
-    <div class="custom-content">
-        <div class="container">
-          <div class="flex-box-square"><img className="img-content"  src= "./assets/section1-img.jpg"/></div>
-          <div class="container2">
-            <p class="text1">Name: Nguyễn Nhĩ Thái </p>
-            <p class="text2">Sinh Viên</p>
-            <p class="text2">Khoa Công nghệ thông tin & Truyền thông</p>
-            <p class="text2">Trường Đại học Cần Thơ</p>
-            <p class="text2">3/2 street, Ninh Kiều District, Can Tho City, Viet Nam </p>
-          </div>
-        </div>
-    </div>
-    <div class="profile-content">
-        <div class="profile-container">
-            <div class="box" onclick="Study_result()">
-                <p>KẾT QUẢ HỌC TẬP</p>
-                <img src="./assets/result.webp" style="width:120px; height: 130px;"/>
-            </div>
-            <div class="box" onclick="CV()">
-                <p>CURRICULUM VITAE</p>
-                <img src="./assets/user-circle-solid.svg" style="width:120px; height: 120px;"/>
-            </div>
-        </div>
-    </div>
+
     <div id="footer">
         <footer class="footer-distributed">       
                 <div class="footer-left">    

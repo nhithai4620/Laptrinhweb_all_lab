@@ -6,19 +6,83 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
     <script>
-        function Study_result() {
-          location.replace("lab1_ex4.html");
-        }
         function Home() {
           location.replace("index.html");
+        } 
+        function caculator(){
+            var a = document.getElementById("inputA").value;
+            if (a != 0){
+            var b = document.getElementById("inputB").value;
+            var c = document.getElementById("inputC").value;
+            var delta = Math.pow(b, 2) -4*a*c ;
+            document.getElementById("delta").innerHTML = "Delta = " + delta;
+            var x1 = (-b + Math.sqrt(delta))/(2*a);
+            var x2 = (-b - Math.sqrt(delta))/(2*a);
+            document.getElementById("x1").innerHTML = "x1 = " + x1;
+            document.getElementById("x2").innerHTML = "x2 = " + x2;
+            }
+            else{
+                alert("a phải khác 0");
+                remove_value();
+            }    
         }
-        function CV() {
-          location.replace("lab1_ex5.html");
+        function remove_value(){
+            document.getElementById("inputA").value = " ";
+            document.getElementById("inputB").value = " ";
+            document.getElementById("inputC").value = " ";
+            document.getElementById("delta").innerHTML = "Delta = ";
+            document.getElementById("x1").innerHTML = "x1 = ";
+            document.getElementById("x2").innerHTML = "x2 = ";
         }
-
-       
-
+     
     </script>
+    <style>
+        .caculator{
+            width: 70%;
+            margin-left: 15%;
+            height: 100%;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            border: 2px solid black ;      
+        }
+        .caculator h1{
+            padding: 20px;
+
+        }
+        .caculator label{
+            font-weight:bold;
+            font-size: 30px;
+            padding-left: 25px;
+        }
+        .caculator input{
+            height: 30px;
+        }
+        .btn{
+            height: 30px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin: 20px;
+            background: rgb(203, 201, 201);
+        }
+        form{
+            padding-bottom: 50px;
+            border-bottom: 3px solid black;
+        }
+        .result p{
+            font-size: 24px;
+            padding: 20px;
+        }
+        .exit{
+            height:30px;
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+            background: rgb(179, 177, 177);
+            font-weight: bold;
+        }
+    </style>
+   
 </head>
 <body>
     <div class="header">
@@ -51,37 +115,34 @@
         </div>
     </div>
     <div class="home">
-        <div class="logan">
-            <h3>Hi !  I ' am</h3>
-            <h5>Coder, Student, Front-end Developer</h5>
-            <p>I am a 3rd year student of Can Tho university, the major is IT HQ</p>
-            <p>My purpose is to get a good job in the future as a web developer</p>
+        <div class="main-container">
+                   <div class="caculator">
+                        <h1>Giải phương trình bậc 2: Ax&#178; + Bx + C = 0 </h1>
+                        <form>
+                            <label>A = </label>
+                            <input type="text" id="inputA"/><br><br>
+                            <label>B = </label>
+                            <input type="text" id="inputB"/><br><br>
+                            <label>C = </label>
+                            <input type="text" id="inputC"/><br><br>
+                            <button type="button" class="btn" onclick="caculator();">
+                                Giải phương trình
+                            </button>
+                        </form>
+                        <div class="result">
+                            <h1>Giải</h1>
+                            <p id="delta">Delta = </p>
+                            <p id="x1"> x1 = </p>
+                            <p id="x2"> x2 = </p>
+                        </div> 
+                        <button class="exit" onClick="remove_value();">
+                            X
+                        </button>               
+                   </div>
+                   
         </div>
     </div>
-    <div class="custom-content">
-        <div class="container">
-          <div class="flex-box-square"><img className="img-content"  src= "./assets/section1-img.jpg"/></div>
-          <div class="container2">
-            <p class="text1">Name: Nguyễn Nhĩ Thái </p>
-            <p class="text2">Sinh Viên</p>
-            <p class="text2">Khoa Công nghệ thông tin & Truyền thông</p>
-            <p class="text2">Trường Đại học Cần Thơ</p>
-            <p class="text2">3/2 street, Ninh Kiều District, Can Tho City, Viet Nam </p>
-          </div>
-        </div>
-    </div>
-    <div class="profile-content">
-        <div class="profile-container">
-            <div class="box" onclick="Study_result()">
-                <p>KẾT QUẢ HỌC TẬP</p>
-                <img src="./assets/result.webp" style="width:120px; height: 130px;"/>
-            </div>
-            <div class="box" onclick="CV()">
-                <p>CURRICULUM VITAE</p>
-                <img src="./assets/user-circle-solid.svg" style="width:120px; height: 120px;"/>
-            </div>
-        </div>
-    </div>
+
     <div id="footer">
         <footer class="footer-distributed">       
                 <div class="footer-left">    

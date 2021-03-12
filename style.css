@@ -124,7 +124,7 @@ body {
     justify-content:center;
 }
 .box{
-    margin: 100px;
+    margin: 10%;
     height: 300px;
     width: 300px;
     background: lightcoral;
@@ -428,7 +428,7 @@ body {
         justify-content:center;
     }
     .box{
-        margin: 100px;
+        margin: 5%;
         height: 150px;
         width: 150px;
     }
@@ -442,17 +442,5 @@ body {
     .box img{
         display: none;
     }
-    
-
 }
 
-@media (max-width: 880px) {
-    .table-contents{
-        padding-bottom: 70px;
-    
-    }
-    .main-container{
-        height: 2000px;
-    }
-
-}

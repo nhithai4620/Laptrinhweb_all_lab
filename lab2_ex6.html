@@ -6,19 +6,53 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css"> 
     <script>
-        function Study_result() {
-          location.replace("lab1_ex4.html");
-        }
         function Home() {
           location.replace("index.html");
-        }
-        function CV() {
-          location.replace("lab1_ex5.html");
-        }
-
-       
-
+        }  
     </script>
+    <style>       
+        .part1 h1{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .part1 div{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+        .part1 img{
+            width: 250px;
+        }
+
+        .part{
+            padding-top: 0px;
+            padding: 40px;
+            margin-left: 50px;
+        }
+        .part h3{
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        .part table{
+            padding-top: 0;
+            padding: 20px;
+            padding-left: 50px;
+            border-bottom: 2px solid blue;
+            width: 100%;
+            padding-bottom: 100px;
+        }
+        table td{
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        table td:first-child{
+            padding-right: 30px;
+            text-align: right;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -51,37 +85,68 @@
         </div>
     </div>
     <div class="home">
-        <div class="logan">
-            <h3>Hi !  I ' am</h3>
-            <h5>Coder, Student, Front-end Developer</h5>
-            <p>I am a 3rd year student of Can Tho university, the major is IT HQ</p>
-            <p>My purpose is to get a good job in the future as a web developer</p>
-        </div>
-    </div>
-    <div class="custom-content">
-        <div class="container">
-          <div class="flex-box-square"><img className="img-content"  src= "./assets/section1-img.jpg"/></div>
-          <div class="container2">
-            <p class="text1">Name: Nguyễn Nhĩ Thái </p>
-            <p class="text2">Sinh Viên</p>
-            <p class="text2">Khoa Công nghệ thông tin & Truyền thông</p>
-            <p class="text2">Trường Đại học Cần Thơ</p>
-            <p class="text2">3/2 street, Ninh Kiều District, Can Tho City, Viet Nam </p>
-          </div>
-        </div>
-    </div>
-    <div class="profile-content">
-        <div class="profile-container">
-            <div class="box" onclick="Study_result()">
-                <p>KẾT QUẢ HỌC TẬP</p>
-                <img src="./assets/result.webp" style="width:120px; height: 130px;"/>
+        <div class="main-container">
+            <div class="part1">
+                <h1>
+                    CURRICULUM VITAE
+                </h1>
+                <div><img src= "./assets/section1-img.jpg"/></div>
+            </div >
+            <div class="part">
+                <h3>Personal Information</h3>
+                <table>
+                    <tr>
+                        <td>Name : </td><td>Nguyễn Nhĩ Thái</td>
+                    </tr>
+                    <tr>
+                        <td>Address : </td><td>3/2 street, Ninh Kiều district, Can Tho city</td>
+                    </tr>
+                    <tr>
+                        <td>Telephone : </td><td>(+84) 0395996992</td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td><td>thaib1809720@student.ctu.edu.vn</td>
+                    </tr>
+                    <tr>
+                        <td>Nationality : </td><td>Vietnamese</td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth : </td><td>04/06/2000</td>
+                    </tr>
+                </table>
             </div>
-            <div class="box" onclick="CV()">
-                <p>CURRICULUM VITAE</p>
-                <img src="./assets/user-circle-solid.svg" style="width:120px; height: 120px;"/>
+            <div class="part">
+                <h3>Education Qualification</h3>
+                <table>
+                    <tr>
+                        <td>2015 : </td><td>Graduated from My Hoi Dong secondary school</td>
+                    </tr>
+                    <tr>
+                        <td>2018 : </td><td>Graduated from My Hoi Dong high school and entered Can Tho university</td>
+                    </tr>
+                    <tr>
+                        <td>2020 : </td><td>Taking B2 Vstep certification</td>
+                    </tr>
+                </table>
             </div>
+            <div class="part">
+                <h3>Employment</h3>
+                <table>
+                    <tr>
+                        <td>10/2018 - Now : </td><td>Student of Can Tho university</td>
+                    </tr>
+                    <tr>
+                        <td>9/2020 - 9/2020 : </td><td>Join scientific research</td>
+                    </tr>
+                    <tr>
+                        <td>9/2020 - 9/2020 : </td><td>Leader of the scientific research team</td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
     </div>
+
     <div id="footer">
         <footer class="footer-distributed">       
                 <div class="footer-left">    

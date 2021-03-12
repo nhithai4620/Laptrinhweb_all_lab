@@ -4,21 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./lab9_css/cal_default.css" id="themeCSS">
     <script>
-        function Study_result() {
-          location.replace("lab1_ex4.html");
-        }
-        function Home() {
+        function Home(){
           location.replace("index.html");
-        }
-        function CV() {
-          location.replace("lab1_ex5.html");
-        }
+        } 
+        function show(params){ 
+             document.getElementById("result").value+=params;
 
-       
+        }
+        function solve(){ 
+             let x = document.getElementById("result").value;
+             let y = eval(x); 
+             document.getElementById("result").value = y; 
+        } 
+        function remove(){ 
+             document.getElementById("result").value = ""; 
+        }
+        function changeTheme(){
+            let x = document.getElementById("theme").value;
+            if (x ==="default"){
+                document.getElementById("themeCSS").href= "./lab9_css/cal_default.css";
+            }else if(x ==="dark"){
+                document.getElementById("themeCSS").href= "./lab9_css/cal_dark.css";
+            }else{
+                document.getElementById("themeCSS").href= "./lab9_css/cal_colorful.css";
+            }
+        }
 
     </script>
+    <style>
+        .main-container{
+            padding:100px;
+            width: 60%;
+            padding-left: 40%;
+        }
+        #selection {
+            margin-bottom:50px;
+        }
+        #selection label{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #theme{
+            height: 30px;
+            width: 80px;
+            border: 2px solid black;
+        }
+
+        
+
+    </style>
 </head>
 <body>
     <div class="header">
@@ -51,37 +88,47 @@
         </div>
     </div>
     <div class="home">
-        <div class="logan">
-            <h3>Hi !  I ' am</h3>
-            <h5>Coder, Student, Front-end Developer</h5>
-            <p>I am a 3rd year student of Can Tho university, the major is IT HQ</p>
-            <p>My purpose is to get a good job in the future as a web developer</p>
-        </div>
-    </div>
-    <div class="custom-content">
-        <div class="container">
-          <div class="flex-box-square"><img className="img-content"  src= "./assets/section1-img.jpg"/></div>
-          <div class="container2">
-            <p class="text1">Name: Nguyễn Nhĩ Thái </p>
-            <p class="text2">Sinh Viên</p>
-            <p class="text2">Khoa Công nghệ thông tin & Truyền thông</p>
-            <p class="text2">Trường Đại học Cần Thơ</p>
-            <p class="text2">3/2 street, Ninh Kiều District, Can Tho City, Viet Nam </p>
-          </div>
-        </div>
-    </div>
-    <div class="profile-content">
-        <div class="profile-container">
-            <div class="box" onclick="Study_result()">
-                <p>KẾT QUẢ HỌC TẬP</p>
-                <img src="./assets/result.webp" style="width:120px; height: 130px;"/>
+        <div class="main-container">
+            <div id="selection">
+                <label for="theme">Select theme:</label>
+                <select name="theme" id="theme" onchange="changeTheme()">
+                    <option value="default">Default</option>
+                    <option value="dark">Dark</option>
+                    <option value="colorful">Colorful</option>
+                </select>
             </div>
-            <div class="box" onclick="CV()">
-                <p>CURRICULUM VITAE</p>
-                <img src="./assets/user-circle-solid.svg" style="width:120px; height: 120px;"/>
-            </div>
+            <table border="1" class="caculator"> 
+                <tr> 
+                   <td colspan="3"><input type="text" id="result" placeholder="0"/></td> 
+                </tr> 
+                <tr id="r1"> 
+                   <td><input type="button" value="1" onclick="show('1')"/> </td> 
+                   <td><input type="button" value="2" onclick="show('2')"/> </td> 
+                   <td><input type="button" value="3" onclick="show('3')"/> </td> 
+                   <td><input type="button" value="/" onclick="show('/')"/> </td> 
+                </tr> 
+                <tr id="r2"> 
+                   <td><input type="button" value="4" onclick="show('4')"/> </td> 
+                   <td><input type="button" value="5" onclick="show('5')"/> </td> 
+                   <td><input type="button" value="6" onclick="show('6')"/> </td> 
+                   <td><input type="button" value="-" onclick="show('-')"/> </td> 
+                </tr> 
+                <tr id="r3"> 
+                   <td><input type="button" value="7" onclick="show('7')"/> </td> 
+                   <td><input type="button" value="8" onclick="show('8')"/> </td> 
+                   <td><input type="button" value="9" onclick="show('9')"/> </td> 
+                   <td><input type="button" value="+" onclick="show('+')"/> </td> 
+                </tr> 
+                <tr id="r4"> 
+                    <td><input type="button" value="c" onclick="remove()"/> </td>
+                   <td><input type="button" value="0" onclick="show('0')"/> </td> 
+                   <td><input type="button" value="=" onclick="solve()"/> </td> 
+                   <td><input type="button" value="*" onclick="show('*')"/> </td> 
+                </tr> 
+             </table>         
         </div>
     </div>
+
     <div id="footer">
         <footer class="footer-distributed">       
                 <div class="footer-left">    
